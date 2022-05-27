@@ -21,6 +21,19 @@ public class RandomUserToUserProcessor implements ItemProcessor<RandomUser, User
             + " "
             + item.getName().getLast());
     user.setEmail(item.getEmail());
+    user.setAddress(
+        item.getLocation().getStreet().getNumber() + " " + item.getLocation().getStreet());
+    user.setCity(item.getLocation().getCity());
+    user.setCountry(item.getLocation().getCountry());
+    user.setPostcode(item.getLocation().getPostcode());
+    user.setCoordinates(
+        item.getLocation().getCoordinates().getLongitude()
+            + " "
+            + item.getLocation().getCoordinates().getLatitude());
+    user.setTimezone(
+        item.getLocation().getTimezone().getOffset()
+            + " "
+            + item.getLocation().getTimezone().getDescription());
     user.setNationality(item.getNat());
 
     user.setCreatedBy(InetAddress.getLocalHost().getHostAddress());

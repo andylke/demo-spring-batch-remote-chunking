@@ -42,6 +42,7 @@ public class ImportRandomUserManagerStepConfig {
         .resource(new FileSystemResource(DownloadRandomUserStepConfig.RANDOM_USER_FILE_PATH))
         .linesToSkip(1)
         .delimited()
+        .delimiter("|")
         .names(DownloadRandomUserStepConfig.RANDOM_USER_FIELD_NAMES)
         .targetType(RandomUser.class)
         .build();

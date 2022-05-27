@@ -42,7 +42,7 @@ public class RandomUserRestServiceReader implements ItemReader<RandomUser> {
   private List<RandomUser> getRandomUsers(int page, int size) {
     return restTemplate
         .getForEntity(
-            "https://randomuser.me/api/?inc=name,gender,email,password,login,nat&page="
+            "https://randomuser.me/api/?inc=name,location,gender,email,password,login,nat&page="
                 + page
                 + "&results="
                 + size,

@@ -13,6 +13,8 @@ public class RandomUser implements Serializable {
 
   private Name name = new Name();
 
+  private Location location = new Location();
+
   private String email;
 
   private Login login = new Login();
@@ -33,6 +35,14 @@ public class RandomUser implements Serializable {
 
   public void setName(Name name) {
     this.name = name;
+  }
+
+  public Location getLocation() {
+    return location;
+  }
+
+  public void setLocation(Location location) {
+    this.location = location;
   }
 
   public String getEmail() {
@@ -64,7 +74,7 @@ public class RandomUser implements Serializable {
     return ToStringBuilder.reflectionToString(this, ToStringStyle.SHORT_PREFIX_STYLE);
   }
 
-  public class Name implements Serializable {
+  public static class Name implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -104,7 +114,157 @@ public class RandomUser implements Serializable {
     }
   }
 
-  public class Login implements Serializable {
+  public static class Location implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
+    private Street street = new Street();
+
+    private String city;
+
+    private String state;
+
+    private String country;
+
+    private String postcode;
+
+    private Coordinates coordinates = new Coordinates();
+
+    private Timezone timezone = new Timezone();
+
+    public Street getStreet() {
+      return street;
+    }
+
+    public void setStreet(Street street) {
+      this.street = street;
+    }
+
+    public String getCity() {
+      return city;
+    }
+
+    public void setCity(String city) {
+      this.city = city;
+    }
+
+    public String getState() {
+      return state;
+    }
+
+    public void setState(String state) {
+      this.state = state;
+    }
+
+    public String getCountry() {
+      return country;
+    }
+
+    public void setCountry(String country) {
+      this.country = country;
+    }
+
+    public String getPostcode() {
+      return postcode;
+    }
+
+    public void setPostcode(String postcode) {
+      this.postcode = postcode;
+    }
+
+    public Coordinates getCoordinates() {
+      return coordinates;
+    }
+
+    public void setCoordinates(Coordinates coordinates) {
+      this.coordinates = coordinates;
+    }
+
+    public Timezone getTimezone() {
+      return timezone;
+    }
+
+    public void setTimezone(Timezone timezone) {
+      this.timezone = timezone;
+    }
+  }
+
+  public static class Street implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
+    private String number;
+
+    private String name;
+
+    public String getNumber() {
+      return number;
+    }
+
+    public void setNumber(String number) {
+      this.number = number;
+    }
+
+    public String getName() {
+      return name;
+    }
+
+    public void setName(String name) {
+      this.name = name;
+    }
+  }
+
+  public static class Coordinates implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
+    private String latitude;
+
+    private String longitude;
+
+    public String getLatitude() {
+      return latitude;
+    }
+
+    public void setLatitude(String latitude) {
+      this.latitude = latitude;
+    }
+
+    public String getLongitude() {
+      return longitude;
+    }
+
+    public void setLongitude(String longitude) {
+      this.longitude = longitude;
+    }
+  }
+
+  public static class Timezone implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
+    private String offset;
+
+    private String description;
+
+    public String getOffset() {
+      return offset;
+    }
+
+    public void setOffset(String offset) {
+      this.offset = offset;
+    }
+
+    public String getDescription() {
+      return description;
+    }
+
+    public void setDescription(String description) {
+      this.description = description;
+    }
+  }
+
+  public static class Login implements Serializable {
 
     private static final long serialVersionUID = 1L;
 

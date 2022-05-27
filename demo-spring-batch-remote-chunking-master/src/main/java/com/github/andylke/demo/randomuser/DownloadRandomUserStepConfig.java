@@ -22,6 +22,16 @@ public class DownloadRandomUserStepConfig {
         "name.title",
         "name.first",
         "name.last",
+        "location.street.number",
+        "location.street.name",
+        "location.city",
+        "location.state",
+        "location.country",
+        "location.postcode",
+        "location.coordinates.latitude",
+        "location.coordinates.longitude",
+        "location.timezone.offset",
+        "location.timezone.description",
         "email",
         "login.uuid",
         "login.username",
@@ -62,6 +72,7 @@ public class DownloadRandomUserStepConfig {
         .encoding("UTF-8")
         .shouldDeleteIfExists(true)
         .delimited()
+        .delimiter("|")
         .names(RANDOM_USER_FIELD_NAMES)
         .headerCallback(callback -> callback.write(StringUtils.join(RANDOM_USER_FIELD_NAMES, ",")))
         .build();

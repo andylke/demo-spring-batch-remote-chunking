@@ -22,6 +22,18 @@ public class User {
 
   private String email;
 
+  private String address;
+
+  private String city;
+
+  private String country;
+
+  private String postcode;
+
+  private String coordinates;
+
+  private String timezone;
+
   private String nationality;
 
   private String createdBy;
@@ -64,6 +76,54 @@ public class User {
 
   public void setEmail(String email) {
     this.email = email;
+  }
+
+  public String getAddress() {
+    return address;
+  }
+
+  public void setAddress(String address) {
+    this.address = address;
+  }
+
+  public String getCity() {
+    return city;
+  }
+
+  public void setCity(String city) {
+    this.city = city;
+  }
+
+  public String getCountry() {
+    return country;
+  }
+
+  public void setCountry(String country) {
+    this.country = country;
+  }
+
+  public String getPostcode() {
+    return postcode;
+  }
+
+  public void setPostcode(String postcode) {
+    this.postcode = postcode;
+  }
+
+  public String getCoordinates() {
+    return coordinates;
+  }
+
+  public void setCoordinates(String coordinates) {
+    this.coordinates = coordinates;
+  }
+
+  public String getTimezone() {
+    return timezone;
+  }
+
+  public void setTimezone(String timezone) {
+    this.timezone = timezone;
   }
 
   public String getNationality() {
